@@ -2,14 +2,11 @@
 
 int Sum(int n){
     if (n == 0) return 0;
-    else if (n > 0)
-    {
-        return Sum(n-1)+Sum(n);
-    }
+    else return n+Sum(n-1);
 }
 
 int main(){
-    int n = 5;
+    int n = 2;
     std:: cout << Sum(n) << std::endl;
 }
 

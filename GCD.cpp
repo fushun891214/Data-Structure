@@ -5,6 +5,7 @@ int GCD(int A,int B){
     else return GCD(B,A%B);
 }
 
+
 int main(){
     int A = 36;
     int B = 6;

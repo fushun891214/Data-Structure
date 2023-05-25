@@ -6,7 +6,7 @@ int Sum(int n){
 }
 
 int main(){
-    int n = 2;
+    int n = 10;
     std:: cout << Sum(n) << std::endl;
 }
 

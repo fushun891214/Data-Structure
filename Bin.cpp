@@ -6,7 +6,7 @@ int Bin(int n,int m){
 }
 
 int main(){
-    int n = 8;
-    int m = 4;
+    int n = 5;
+    int m = 3;
     std::cout << Bin(n,m) << std::endl; 
 }

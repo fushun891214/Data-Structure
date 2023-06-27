@@ -1,6 +1,6 @@
 #include<iostream>
 
-int Fac(int n){
+int Fac_Iterative(int n){
     int s =1;
     if (n==0) return 1;
     else{
@@ -11,6 +11,12 @@ int Fac(int n){
     }
 }
 
+int Fac_Recursive(int n){
+    if (n==0) return 1;
+    else return Fac_Recursive(n-1)*n;
+}
+
 int main(){
-    std::cout << Fac(5) << std::endl; 
+    std::cout << Fac_Recursive(5) << std::endl; 
+    std::cout << Fac_Iterative(5) << std::endl;
 }

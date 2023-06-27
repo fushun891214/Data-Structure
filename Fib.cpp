@@ -6,7 +6,21 @@ int Fib_recursive(int n){ //recursive
     else return Fib_recursive(n-1)+Fib_recursive(n-2);
 }
 
-int Fib_Iterative(int n){ //Iterative
+int Fib_Interative(int n){
+    if (n==0) return 0;
+    else if (n==1) return 1;
+    else{
+        int a=0,b=1,c;
+        for (int i=2;i<=n;i++){
+            c = a+b;
+            a = b;
+            b = c;
+        }
+        return c;
+    }
+}
+
+int Fib_DP(int n){ //DP
     int F [n+1] ;
     F [0] = 0;
     F [1] = 1;
@@ -20,13 +34,10 @@ int Fib_Iterative(int n){ //Iterative
     }
 }
 
-int Fib(int n){
-    if (n==0||n==1) return 1;
-    else return Fib(n-1)+Fib(n-2);
-}
-
 int main()
 {
     int n = 5;
-    std::cout << Fib(n) << std::endl;
+    std::cout << Fib_Interative(n) << std::endl;
+    std::cout << Fib_recursive(n) << std::endl;
+    std::cout << Fib_DP(n) << std::endl;
 }
